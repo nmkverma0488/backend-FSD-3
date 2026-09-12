@@ -1,7 +1,7 @@
 import express from 'express';
 import fs from 'fs';
 const app=express();
-const PORT=3000;
+const PORT=8000;
 app.get('/',(req,res)=>{
     fs.readFile('./pages/index.html','utf-8',(err,data)=>{
 if(err){
@@ -40,5 +40,5 @@ if(err){
 });
 
 app.listen(PORT,()=>{
-    console.log(`Server is running on http://loaclhost:${POST}`)
+    console.log(`Server is running on http://localhost:${PORT}`)
 })
