@@ -1,0 +1,19 @@
+{
+  "name": "httpmodule",
+  "version": "1.0.0",
+  "description": "Create my own server using Node.js HTTP module",
+  "main": "http.js",
+  "scripts": {
+    "start": "node http.js",
+    "dev": "node http.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "nodejs",
+    "http",
+    "server"
+  ],
+  "author": "Nirjara Verma",
+  "license": "ISC",
+  "type": "commonjs"
+}
