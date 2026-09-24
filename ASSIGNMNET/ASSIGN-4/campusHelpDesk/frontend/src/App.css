@@ -1,0 +1,233 @@
+/* ================================
+   CAMPUS HELP DESK - MODERN UI
+================================ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", "Segoe UI", sans-serif;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top left, #dbeafe, transparent 35%),
+    radial-gradient(circle at bottom right, #e0e7ff, transparent 35%),
+    #f8fafc;
+  color: #172033;
+}
+
+/* Main Container */
+
+.container {
+  width: 92%;
+  max-width: 1100px;
+  margin: 45px auto;
+}
+
+/* ================================
+   HEADER
+================================ */
+
+h1 {
+  text-align: center;
+  font-size: 42px;
+  font-weight: 800;
+  letter-spacing: -1px;
+  color: #172554;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  text-align: center;
+  color: #64748b;
+  font-size: 16px;
+  margin-bottom: 35px;
+}
+
+/* ================================
+   FORM
+================================ */
+
+form {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 32px;
+  border-radius: 20px;
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  box-shadow: 0 15px 45px rgba(15, 23, 42, 0.10);
+  backdrop-filter: blur(10px);
+}
+
+label {
+  display: block;
+  margin: 18px 0 7px;
+  color: #334155;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 13px 15px;
+  border: 1px solid #dbe2ea;
+  border-radius: 10px;
+  background: #f8fafc;
+  color: #1e293b;
+  font-size: 14px;
+  outline: none;
+  transition: all 0.25s ease;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #2563eb;
+  background: white;
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.10);
+}
+
+textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* ================================
+   SUBMIT BUTTON
+================================ */
+
+button {
+  border: none;
+  margin-top: 22px;
+  padding: 13px 25px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #1e3a8a, #2563eb);
+  color: white;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 7px 18px rgba(37, 99, 235, 0.25);
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(37, 99, 235, 0.35);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+/* ================================
+   REQUEST SECTION
+================================ */
+
+h2 {
+  margin: 45px 0 20px;
+  font-size: 26px;
+  color: #172554;
+}
+
+/* Requests Grid */
+
+.requests {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+/* ================================
+   REQUEST CARD
+================================ */
+
+.card {
+  position: relative;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 24px;
+  border-radius: 18px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 8px 25px rgba(15, 23, 42, 0.08);
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 5px;
+  height: 100%;
+  background: linear-gradient(#2563eb, #7c3aed);
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 35px rgba(15, 23, 42, 0.14);
+}
+
+/* Card Heading */
+
+.card h3 {
+  color: #1e3a8a;
+  font-size: 19px;
+  margin-bottom: 15px;
+}
+
+/* Card Text */
+
+.card p {
+  color: #64748b;
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 8px 0;
+}
+
+.card p b {
+  color: #334155;
+}
+
+/* ================================
+   DELETE BUTTON
+================================ */
+
+.delete {
+  background: linear-gradient(135deg, #dc2626, #ef4444);
+  box-shadow: 0 6px 15px rgba(220, 38, 38, 0.20);
+}
+
+.delete:hover {
+  background: linear-gradient(135deg, #b91c1c, #dc2626);
+  box-shadow: 0 9px 20px rgba(220, 38, 38, 0.30);
+}
+
+/* ================================
+   RESPONSIVE DESIGN
+================================ */
+
+@media (max-width: 700px) {
+
+  .container {
+    width: 94%;
+    margin: 25px auto;
+  }
+
+  h1 {
+    font-size: 32px;
+  }
+
+  .subtitle {
+    font-size: 14px;
+  }
+
+  form {
+    padding: 22px;
+  }
+
+  .requests {
+    grid-template-columns: 1fr;
+  }
+}
